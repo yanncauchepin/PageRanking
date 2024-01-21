@@ -17,4 +17,4 @@ main.o : list_ref.h simple_hashing.h read_tsv.h utils.h main.c
 	gcc -c list_ref.h simple_hashing.h read_tsv.h utils.h main.c -Wall
 
 clean :
-	rm *.o main *.gch
+	rm *.o pageranking *.gch
