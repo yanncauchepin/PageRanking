@@ -86,7 +86,6 @@ Link* extract_links(const char* input, int* link_count) {
 
 void print_links (Link* links, int size) {
     printf("Links :\n");
-    int i = 0 ;
     for(int i=0; i<size;i++) {
         printf("(%s, %s)\n", links[i].source, links[i].destination);
     }

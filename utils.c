@@ -31,73 +31,72 @@ void clear_squared_matrix(double** matrix, int size) {
     free(matrix) ;
 }
 
-double* prod_scal_vec (double a, double*x, int size_x){
-    for(int i=0;i<size_x;i++){
-        x[i]=a*x[i];
+double* multiply_scalar_with_vector (double scalar, double* vector, int size){
+    for(int i=0;i<size;i++){
+        vector[i]=scalar*vector[i];
     }
-    return (x);
+    return vector ;
 }
 
-double* prod_mat_vec(double** m, double*x,int N){
-    double* temp=(double*)malloc(N*sizeof(double));
-    for(int j=0;j<N;j++){
-        temp[j]=0;
+double* mutliply_matrix_with_vector (double** matrix, double* vector, int size){
+    double* result = (double*) malloc (size*sizeof(double));
+    for(int i=0;i<size;i++){
+        result[i]=0;
     }
-    for(int j=0;j<N;j++){
-        temp[0]=temp[0]+m[0][j]*x[j];
+    for(int i=0;i<size;i++){
+        result[0]=result[0]+matrix[0][i]*vector[i];
     }
-    for(int i=1;i<N;i++){
-        for(int j=0;j<N;j++){
-            temp[i]=temp[i]+m[i][j]*x[j];
+    for(int i=1;i<size;i++){
+        for(int j=0;j<size;j++){
+            result[i]=result[i]+matrix[i][j]*vector[j];
         }
     }
-    return(temp);
+    return(result);
 }
 
-double* normalize_vec(double*x, int N){
-    double somme = x[0];
-    for(int i=1;i<N;i++){
-        somme = somme + x[i];
+double* normalize_vector (double* vector, int size){
+    double sum = vector[0];
+    for(int i=1;i<size;i++){
+        sum = sum + vector[i];
     }
-    for(int i=0;i<N;i++){
-        x[i]=x[i]/somme;
+    for(int i=0;i<size;i++){
+        vector[i]=vector[i]/sum;
     }
-    return(x);
+    return vector;
 }
 
-void sort_index(int* ind, double* vec, int size) {
-    int ind_deja_tire[size] ;
+void sort_index (int* sorted_index, double* vector, int size) {
+    int already_sorted_index[size] ;
     double max;
-    int indice;
+    int index;
     for (int i=0 ; i<size ; i++) {
-        ind_deja_tire[i] = 0 ;
+        already_sorted_index[i] = 0 ;
     }
     for (int i=0 ; i<size ; i++) {
-        indice = -1 ;
-        max=-1.0;
+        index = -1 ;
+        max = -1.0;
         for (int j=0 ; j<size ; j++) {
-            if (ind_deja_tire[j]==0) {
-                if (vec[j]>max) {
-                    indice=j ;
-                    max=vec[j] ;
+            if (already_sorted_index[j]==0) {
+                if (vector[j]>max) {
+                    index=j ;
+                    max=vector[j] ;
                 }
             }
         }
-        if(indice != -1)
-        {
-            ind_deja_tire[indice]=1 ;
-            ind[i]=indice;
+        if (index != -1) {
+            already_sorted_index[index]=1 ;
+            sorted_index[i]=index;
         }
     }
 }
 
-double diff_vec_vec(double*a,double*b,int lines){
+double difference_vector_vector (double* a,double* b, int size){
 
-    double diff=fabs(a[0]-b[0]);
-    for(int i=1;i<lines;i++){
-        diff = diff + fabs(a[i]-b[i]);
+    double difference = fabs(a[0]-b[0]);
+    for(int i=1;i<size;i++){
+        difference = difference + fabs(a[i]-b[i]);
     }
-    printf("Indice de convergence : %.10lf\n\n", diff);
+    printf("Convergence index : %.10lf\n\n", difference);
 
-    return(diff);
+    return difference;
 }

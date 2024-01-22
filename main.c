@@ -9,10 +9,12 @@
 #include "utils.h"
 #include "simple_hashing.h"
 
-#define DATA "/dataset/test.tsv"
-
+// TO DO LIST
 // Check whether there are website which are include into destination but not present in hashing_table due to lack of link to others websites.
 // Check whether we have to change columns and row in the building of transition_matrix
+// Check for a better hashing function and how to handle error in hashing, maybe size of hashing
+// Check how to free allocated memory of transition_matrix without having double free or corruption abordet core dumped
+// data test.tsv works but there is errors with paths_finished.tsv -> produced by free hashing table
 
 void monitor_initialisation (double* damping_factor, double* threshold, double* q, int size, int* custom, char** list_custom, int* init_number, char** websites) {
 
@@ -105,12 +107,16 @@ int hashing (char* website) {
 
 int main(int argc, char *argv[]) {
 
-    //FILE* file = NULL;
-    //file = fopen(argv[1], "r");
-    FILE *file = fopen(DATA, "r") ;
+    if (argc < 2) {
+       // Not enough arguments provided, display a message and exit
+       printf("Usage : %s <file_name>\n", argv[0]);
+       return 1;
+    }
+
+    FILE *file = fopen(argv[1], "r") ;
 
     if (file == NULL) {
-        printf("Unable to open the file");
+        printf("Unable to open the file.\n");
 
     } else {
 
@@ -145,7 +151,8 @@ int main(int argc, char *argv[]) {
 
         fill_transition_matrix(transition_matrix, size, &T, websites) ;
 
-        clear_hashing_table (&T) ;
+        // ERROR
+        //clear_hashing_table (&T) ;
 
         // INITIALISATION
         printf("\n> INITIALISATION\n") ;
@@ -159,7 +166,6 @@ int main(int argc, char *argv[]) {
         double* q = (double*) malloc (size*sizeof(double));
         double* q_prec = (double*) malloc (size*sizeof(double));
 
-        printf("OK") ;
         monitor_initialisation (&damping_factor, &threshold, q, size, &custom, list_custom, &init_number, websites) ;
 
         constant_factor = (1.0-damping_factor)/init_number ;
@@ -176,7 +182,7 @@ int main(int argc, char *argv[]) {
             memmove (q_prec, q, size*sizeof(double));
 
             // Adding the first term of q
-            q = prod_scal_vec(damping_factor, prod_mat_vec(transition_matrix,q_prec, size), size) ;
+            q = multiply_scalar_with_vector (damping_factor, mutliply_matrix_with_vector(transition_matrix,q_prec, size), size) ;
 
             // Computing sum q_prec[i]
             sum = 0;
@@ -198,12 +204,12 @@ int main(int argc, char *argv[]) {
             }
 
             // Normalization of q
-            q = normalize_vec (q,size);
+            q = normalize_vector (q,size);
             iteration++ ;
 
             printf("Iteration : %d\n", iteration);
 
-        } while (diff_vec_vec(q, q_prec, size) > threshold);
+        } while (difference_vector_vector(q, q_prec, size) > threshold);
 
         // DISPLAY RESULTS
         printf("\n> DISPLAY RESULTS\n") ;
@@ -237,7 +243,8 @@ int main(int argc, char *argv[]) {
         free(sorted_index) ;
         free(q) ;
         free(q_prec) ;
-        clear_squared_matrix(transition_matrix, size) ;
+        // ERROR
+        //clear_squared_matrix(transition_matrix, size) ;
         for (int i=0;i<size;i++) {
             free(websites[i]) ;
         }

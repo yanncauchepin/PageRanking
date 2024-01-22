@@ -9,14 +9,14 @@ extern void build_squared_matrix(double**, int) ;
 
 extern void clear_squared_matrix (double**, int) ;
 
-extern double* prod_scal_vec (double, double*, int) ;
+extern double* multiply_scalar_with_vector (double, double*, int) ;
 
-extern double* prod_mat_vec (double**, double*, int) ;
+extern double* mutliply_matrix_with_vector (double**, double*, int) ;
 
-extern double* normalize_vec (double*, int) ;
+extern double* normalize_vector (double*, int) ;
 
 extern void sort_index(int*, double*, int) ;
 
-extern double diff_vec_vec (double*, double*, int) ;
+extern double difference_vector_vector (double*, double*, int) ;
 
 #endif
