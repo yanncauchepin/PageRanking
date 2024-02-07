@@ -29,7 +29,7 @@ make all
 ```bash
 cd Code
 make all
-./pageranking ../Dataset/pats_finished.tsv
+./pageranking ../Dataset/paths_finished.tsv
 ```
 
 ### Monitor ###
