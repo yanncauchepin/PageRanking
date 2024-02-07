@@ -18,12 +18,20 @@ Before running this code, ensure you have the following :
 2. Compile the code by running *'make all'*.
 3. Execute the compiled program by running *'./pageranking ../Dataset/input_file.tsv'*, where *'../Dataset/input_file.tsv'* is the path to the *TSV* file containing the input data.
 
-Example :
+### Example ###
 '''bash
 cd Code
 make all
 ./pageranking ../Dataset/pats_finished.tsv
 '''
+
+### Monitor ###
+
+To configure the parameters for the PageRank algorithm, the user have to inform values during the execution of the program. In chronological order, the user have to provide :
+- **Damping Factor** : Float value between 0 and 1.
+- **Convergence Threshold** : Integer value which indicates the negative logarithmic power.
+- **Classical or Customized Ranking** : Integer value between 0 and 1 which indicates if the program initialize a classical or a customized ranking.
+- (Optional) **Customized Websites** : If selecting customized ranking, iterates string character which indicates the names of websites the user want to customize. ***'None'*** to stop the scan iteration.
 
 ## Results ##
 
