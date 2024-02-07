@@ -225,7 +225,7 @@ int main(int argc, char *argv[]) {
 
         // Load sorted results in an output file
         FILE * file_output ;
-        file_output = fopen("output.txt", "w");
+        file_output = fopen("../Output/output.txt", "w");
         printf("Loading sorted results in an output file.\n") ;
         if (file_output == NULL) {
             printf("Unable to create the output file.\n");
