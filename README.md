@@ -19,11 +19,11 @@ Before running this code, ensure you have the following :
 3. Execute the compiled program by running *'./pageranking ../Dataset/input_file.tsv'*, where *'../Dataset/input_file.tsv'* is the path to the *TSV* file containing the input data.
 
 Example :
-'''bash
+```bash
 cd Code
 make all
 ./pageranking ../Dataset/pats_finished.tsv
-'''
+```
 
 ## Results ##
 
