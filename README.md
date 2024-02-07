@@ -24,7 +24,7 @@ make all
 ./pageranking ../Dataset/input_file.tsv
 ```
 
-Example :
+### Example ###
 
 ```bash
 cd Code
@@ -38,7 +38,7 @@ To configure the parameters for the PageRank algorithm, the user have to inform 
 - **Damping Factor** : Float value between 0 and 1.
 - **Convergence Threshold** : Integer value which indicates the negative logarithmic power.
 - **Classical or Customized Ranking** : Integer value between 0 and 1 which indicates if the program initialize a classical or a customized ranking.
-- (Optional) **Customized Websites** : If selecting customized ranking, iterates string character which indicates the names of websites the user want to customize. ***'None'*** to stop the scan iteration.
+- *(Optional)* **Customized Websites** : If selecting customized ranking, iterates string character which indicates the names of websites the user want to customize. ***'None'*** to stop the scan iteration.
 
 ## Results ##
 
