@@ -15,11 +15,11 @@ Before running this code, ensure you have the following :
 ## Usage ##
 
 1. Navigate to the **Code** directory containing the source code and the ***Makefile*** file.
-2. Compile the code by running ***'make all'***.
+2. Compile the code by running ***make all***.
 ```bash
 make all
 ```
-3. Execute the compiled program by running ***'./pageranking ../Dataset/input_file.tsv'***, where ***'../Dataset/input_file.tsv'*** is the path to the ***TSV*** file containing the input data.
+3. Execute the compiled program by running ***./pageranking ../Dataset/input_file.tsv***, where ***../Dataset/input_file.tsv*** is the path to the ***TSV*** file containing the input data.
 ```bash
 ./pageranking ../Dataset/input_file.tsv
 ```
