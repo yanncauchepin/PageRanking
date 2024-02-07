@@ -22,7 +22,7 @@ cd Code
 ```bash
 make all
 ```
-3. The compiled program is now located in the parent repository **..**.
+3. The compiled program ***pageranking*** is now located in the parent repository.
 ```bash
 cd ..
 ```
@@ -30,7 +30,7 @@ cd ..
 ```bash
 ./pageranking Dataset/input_file.tsv
 ```
-*(Optional)* 5. Clean the repository by running ***make clean*** in the ***Code*** directory.
+*(Optional)* 5. Clean the repository by running ***make clean*** in the **Code** directory.
 ```bash
 cd Code
 make clean
