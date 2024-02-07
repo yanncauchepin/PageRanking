@@ -1,5 +1,5 @@
 all : main.o list_ref.o simple_hashing.o read_tsv.o utils.o
-	gcc -g -o pageranking *.o -Wall -lm
+	gcc -g -o ../pageranking *.o -Wall -lm
 
 utils.o : utils.h utils.c
 	gcc -c utils.h utils.c -Wall
@@ -17,4 +17,4 @@ main.o : list_ref.h simple_hashing.h read_tsv.h utils.h main.c
 	gcc -c list_ref.h simple_hashing.h read_tsv.h utils.h main.c -Wall
 
 clean :
-	rm *.o pageranking *.gch
+	rm *.o *.gch ../pageranking

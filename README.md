@@ -15,13 +15,25 @@ Before running this code, ensure you have the following :
 ## Usage ##
 
 1. Navigate to the **Code** directory containing the source code and the ***Makefile*** file.
+```bash
+cd Code
+```
 2. Compile the code by running ***make all***.
 ```bash
 make all
 ```
-3. Execute the compiled program by running ***./pageranking ../Dataset/input_file.tsv***, where ***../Dataset/input_file.tsv*** is the path to the ***tsv*** file containing the input data.
+3. The compiled program is now located in the parent repository **..**.
 ```bash
-./pageranking ../Dataset/input_file.tsv
+cd ..
+```
+4. Execute the compiled program by running ***./pageranking Dataset/input_file.tsv***, where ***Dataset/input_file.tsv*** is the path to the ***tsv*** file containing the input data.
+```bash
+./pageranking Dataset/input_file.tsv
+```
+*(Optional)* 5. Clean the repository by running ***make clean*** in the ***Code*** directory.
+```bash
+cd Code
+make clean
 ```
 
 ### Example ###
@@ -29,7 +41,8 @@ make all
 ```bash
 cd Code
 make all
-./pageranking ../Dataset/paths_finished.tsv
+cd ..
+./pageranking Dataset/paths_finished.tsv
 ```
 
 ### Monitor ###
