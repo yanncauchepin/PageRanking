@@ -57,7 +57,7 @@ To configure the parameters for the PageRank algorithm, the user have to inform 
 
 The program will display the 20 websites with the highest scores in the terminal. Additionally, the scores for all websites will be saved in the **Output** directory in the file named ***output.txt***.
 
-## To do list (self) ##
+## To do list ##
 
 - [ ] Update the report in the Deprecated directory by using Latex.
 - [ ] Check consistency of the input websites such as unfinished paths (Dataset/paths_unfinished.tsv) or others special features.
