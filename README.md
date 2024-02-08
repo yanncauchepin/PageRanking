@@ -7,10 +7,13 @@ This code implements the PageRank algorithm to calculate the importance of web p
 Before running this code, ensure you have the following :
 
 - ***gcc*** compiler installed on your system.
-- Input data in ***tsv*** format containing user paths. Some examples are located in the **Dataset** directory.
-    - The names of articles must be URL-encoded.
-    - Articles in a path are separated by ";".
-    - Back clicks are represented by "<".
+
+## Input Dataset ## 
+
+The input dataset is in the ***tsv*** format and contain user paths. Some examples are located in the **Dataset** directory.
+- The names of articles must be URL-encoded.
+- Articles in a path are separated by
+- Back clicks are represented by "<".
 
 ## Usage ##
 
