@@ -48,7 +48,7 @@ cd ..
 ./pageranking Dataset/paths_finished.tsv
 ```
 
-### Monitor ###
+## Monitor ##
 
 To configure the parameters for the PageRank algorithm, the user have to inform values during the execution of the program. In chronological order, the user have to provide :
 - **Damping Factor** : Float value between 0 and 1.
