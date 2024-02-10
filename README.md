@@ -8,7 +8,7 @@ Before running this code, ensure you have the following :
 
 - ***gcc*** compiler installed on your system.
 
-## Input Dataset ## 
+## Input Dataset ##
 
 The input dataset is in the ***tsv*** format and contain user paths. Some examples are located in the **Dataset** directory.
 - The names of articles must be URL-encoded.
@@ -25,13 +25,13 @@ cd Code
 ```bash
 make all
 ```
-3. The compiled program ***pageranking*** is now located in the parent repository.
+3. The compiled program ***pagerank*** is now located in the parent repository.
 ```bash
 cd ..
 ```
-4. Execute the compiled program by running ***./pageranking Dataset/input_file.tsv***, where ***Dataset/input_file.tsv*** is the path to the ***tsv*** file containing the input data.
+4. Execute the compiled program by running ***./pagerank Dataset/input_file.tsv***, where ***Dataset/input_file.tsv*** is the path to the ***tsv*** file containing the input data.
 ```bash
-./pageranking Dataset/input_file.tsv
+./pagerank Dataset/input_file.tsv
 ```
 *(Optional)* 5. Clean the repository by running ***make clean*** in the **Code** directory.
 ```bash
@@ -45,7 +45,7 @@ make clean
 cd Code
 make all
 cd ..
-./pageranking Dataset/paths_finished.tsv
+./pagerank Dataset/paths_finished.tsv
 ```
 
 ## Monitor ##
@@ -67,3 +67,4 @@ The program will display the 20 websites with the highest scores in the terminal
 - [ ] Identify errors why results are identical and constant for any websites.
 - [ ] Correct errors where some websites have same index in hashing function. Handle the case of same index or find solutions to return different indexes.
 - [ ] Correct errors to adapt the hashing table according to the number of websites.
+- [ ] Correct error to free transition matrix in main.
