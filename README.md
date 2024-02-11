@@ -73,3 +73,4 @@ The program will display the 20 websites with the highest scores in the terminal
 - [ ] Check whether we have to change columns and row in the building of transition_matrix
 - [ ] Check for a better hashing function and how to handle error in hashing, maybe size of hashing
 - [ ] data test.tsv works but there is errors with paths_finished.tsv -> produced by free hashing table
+- [ ] Adapt the repository to well developer traditions.
