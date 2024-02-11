@@ -1,4 +1,5 @@
-# PageRank Algorithm in C #
+# PageRank Algorithm #
+> ### Language : C ###
 
 This code implements the PageRank algorithm to calculate the importance of web pages. It is designed to work with input data provided in ***tsv*** format, where each line represents a path taken by users in the Wikispeedia game.
 
