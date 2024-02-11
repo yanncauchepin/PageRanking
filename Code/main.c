@@ -9,13 +9,6 @@
 #include "utils.h"
 #include "simple_hashing.h"
 
-// TO DO LIST
-// Check whether there are website which are include into destination but not present in hashing_table due to lack of link to others websites.
-// Check whether we have to change columns and row in the building of transition_matrix
-// Check for a better hashing function and how to handle error in hashing, maybe size of hashing
-// Check how to free allocated memory of transition_matrix without having double free or corruption abordet core dumped
-// data test.tsv works but there is errors with paths_finished.tsv -> produced by free hashing table
-
 void monitor_initialisation (double* damping_factor, double* threshold, double* q, int size, int* custom, char** list_custom, int* init_number, char** websites) {
 
     printf("Enter the value of the damping factor, between 0 and 1 : ") ;
