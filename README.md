@@ -18,9 +18,9 @@ The input dataset is in the ***tsv*** format and contain user paths. Some exampl
 
 ## Usage ##
 
-1. Navigate to the **Code** directory containing the source code and the ***Makefile*** file.
+1. Navigate to the **code** directory containing the source code and the ***Makefile*** file.
 ```bash
-cd Code
+cd code
 ```
 2. Compile the code by running ***make all***.
 ```bash
@@ -30,23 +30,23 @@ make all
 ```bash
 cd ..
 ```
-4. Execute the compiled program by running ***./pagerank Dataset/input_file.tsv***, where ***Dataset/input_file.tsv*** is the path to the ***tsv*** file containing the input data.
+4. Execute the compiled program by running ***./pagerank dataset/input_file.tsv***, where ***dataset/input_file.tsv*** is the path to the ***tsv*** file containing the input data.
 ```bash
-./pagerank Dataset/input_file.tsv
+./pagerank dataset/input_file.tsv
 ```
-*(Optional)* 5. Clean the repository by running ***make clean*** in the **Code** directory.
+*(Optional)* 5. Clean the repository by running ***make clean*** in the **code** directory.
 ```bash
-cd Code
+cd code
 make clean
 ```
 
 ### Example ###
 
 ```bash
-cd Code
+cd code
 make all
 cd ..
-./pagerank Dataset/paths_finished.tsv
+./pagerank dataset/paths_finished.tsv
 ```
 
 ## Monitor ##
@@ -59,7 +59,7 @@ To configure the parameters for the PageRank algorithm, the user have to inform 
 
 ## Results ##
 
-The program will display the 20 websites with the highest scores in the terminal. Additionally, the scores for all websites will be saved in the **Output** directory in the file named ***output.txt***.
+The program will display the 20 websites with the highest scores in the terminal. Additionally, the scores for all websites will be saved in the **output** directory in the file named ***output.txt***.
 
 ## To do list ##
 
