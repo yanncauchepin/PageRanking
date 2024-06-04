@@ -60,17 +60,3 @@ To configure the parameters for the PageRank algorithm, the user have to inform 
 ## Results ##
 
 The program will display the 20 websites with the highest scores in the terminal. Additionally, the scores for all websites will be saved in the **output** directory in the file named ***output.txt***.
-
-## To do list ##
-
-- [ ] Update the report in the Deprecated directory by using Latex.
-- [ ] Check consistency of the input websites such as unfinished paths (Dataset/paths_unfinished.tsv) or others special features.
-- [ ] Identify errors why results are identical and constant for any websites.
-- [ ] Correct errors where some websites have same index in hashing function. Handle the case of same index or find solutions to return different indexes.
-- [ ] Correct errors to adapt the hashing table according to the number of websites.
-- [ ] Check how to free allocated memory of transition_matrix without having double free or corruption abordet core dumped
-- [ ] Check whether there are website which are include into destination but not present in hashing_table due to lack of link to others websites.
-- [ ] Check whether we have to change columns and row in the building of transition_matrix
-- [ ] Check for a better hashing function and how to handle error in hashing, maybe size of hashing
-- [ ] data test.tsv works but there is errors with paths_finished.tsv -> produced by free hashing table
-- [ ] Adapt the repository to well developer traditions.
