@@ -2,7 +2,7 @@
 
 This code implements the PageRank algorithm to compute the rank of web pages. It is designed to work with input data provided in ***tsv*** format, where each line represents a path taken by users in the Wikispedia game.
 
-## Prerequisites ##
+## Prerequisites 
 
 Before running this code, you need to have
 
@@ -59,3 +59,7 @@ To configure the parameters for the PageRank algorithm, the user have to inform 
 ## Results
 
 The program will display the 20 websites with the highest scores in the terminal. Additionally, the scores for all websites will be saved in the **output** directory in the file named ***output.txt***.
+
+---
+
+![](featured_image.jpg)
