@@ -1,10 +1,3 @@
-<p align="center">
-  <img src="featured_image.png" alt="" width="80%">
-</p>
-
----
-
-
 # PageRank Algorithm 
 
 This code implements the PageRank algorithm to compute the rank of web pages. It is designed to work with input data provided in ***tsv*** format, where each line represents a path taken by users in the Wikispedia game.
